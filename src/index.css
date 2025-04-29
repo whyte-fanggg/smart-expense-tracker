@@ -1,0 +1,268 @@
+/* ------------------------------------ */
+/* RESET STYLES */
+/* ------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #f9fafb, #e5e7eb);
+  color: #1f2937;
+  font-weight: 400;
+}
+
+/* ------------------------------------ */
+/* BASE CONTAINER */
+/* ------------------------------------ */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ------------------------------------ */
+/* HEADINGS */
+/* ------------------------------------ */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  letter-spacing: -0.5px;
+}
+
+.subheading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ------------------------------------ */
+/* DASHBOARD GRID */
+/* ------------------------------------ */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 360px auto 360px;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------ */
+/* FORM CARD */
+/* ------------------------------------ */
+form {
+  width: 100%;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.total-spent {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #4f46e5;
+}
+
+.total-spent span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* ------------------------------------ */
+/* FILTERS CARD */
+/* ------------------------------------ */
+.filters-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.actions-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
+
+.button-primary:hover {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.4);
+}
+
+.button-danger {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}
+
+.button-danger:hover {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 6px 14px rgba(239, 68, 68, 0.4);
+}
+
+/* ------------------------------------ */
+/* EXPENSE CARDS */
+/* ------------------------------------ */
+.expense-scroll-box {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.expense-card {
+  background: linear-gradient(to bottom right, #ffffff, #f9fafb);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.expense-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.expense-info p {
+  margin-bottom: 0.2rem;
+}
+
+.button-edit {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
+
+.button-edit:hover {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  /* box-shadow: 0 6px 14px rgba(79, 70, 229, 0.4); */
+}
+
+.button-delete {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-delete:hover {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  /* box-shadow: 0 6px 14px rgba(239, 68, 68, 0.5); */
+}
+
+.expense-scroll-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.expense-scroll-box::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.5);
+  border-radius: 10px;
+}
+
+/* ------------------------------------ */
+/* PIE CHART CARD */
+/* ------------------------------------ */
+.chart-container {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* ------------------------------------ */
+/* FADE-IN ANIMATION */
+/* ------------------------------------ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
