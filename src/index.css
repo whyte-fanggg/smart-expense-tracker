@@ -50,16 +50,16 @@ body {
 /* ------------------------------------ */
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 360px auto 360px;
+  grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: start;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .dashboard-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 360px 1fr 360px;
   }
 }
+
 
 /* ------------------------------------ */
 /* FORM CARD */
@@ -72,6 +72,8 @@ form {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   animation: fadeIn 0.6s ease forwards;
   opacity: 0;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 input,
@@ -251,6 +253,9 @@ textarea:focus {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   animation: fadeIn 0.6s ease forwards;
   opacity: 0;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 /* ------------------------------------ */
